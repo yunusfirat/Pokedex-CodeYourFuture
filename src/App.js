@@ -27,10 +27,10 @@ function App() {
 							<Link to="/caughtpokemon">caught pokemon</Link>
 						</li>
 						<li>
-							<Link to="/pokemon/Pikachu">Pikachu</Link>
+							<Link to="/pokemon/1">bulbasaur</Link>
 						</li>
 						<li>
-							<Link to="/pokemon/Balbazar">Balbazar</Link>
+							<Link to="/pokemon/2">ivysaur</Link>
 						</li>
 					</ul>
 
