@@ -3,8 +3,8 @@ import BestPokemon from "./BestPokemon";
 import Logo from "./Logo";
 import CaughtPokemon from "./CaughtPokemon";
 // import PokemonMoves from "./PokemonMoves";
-import PokemonMovesSelector from "./PokemonMovesSelector";
-import PokemonCity from "./PokemonCity";
+// import PokemonMovesSelector from "./PokemonMovesSelector";
+// import PokemonCity from "./PokemonCity";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import PokemonInfo from "./PokemonInfo";
 
@@ -35,18 +35,21 @@ function App() {
 					</ul>
 
 				</nav>
-				<Logo logWhenClicked={logWhenClicked} appName="Pokedex" />
 				<Route
 					path="/bestpokemon/"
-					render={() => <BestPokemon abilities={abilities} />}
+					render={() =>
+						<>
+							<BestPokemon abilities={abilities} />
+							<Logo logWhenClicked={logWhenClicked} appName="Pokedex" />
+						</>}
 				/>
 				<Route
 					path="/caughtpokemon/"
 					render={() => <CaughtPokemon date={date} />}
 				/>
 				<Route path="/pokemon/:name" component={PokemonInfo} />
-				<PokemonMovesSelector />
-				<PokemonCity />
+				{/* <PokemonMovesSelector />
+				<PokemonCity /> */}
 			</div>
 
 		</BrowserRouter>
